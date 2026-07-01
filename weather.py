@@ -9,13 +9,13 @@ def get_weather(city):
         response = requests.get(Base_Url)
         data = response.json()
         if response.status_code==200:
-            print(f"Weather in {data['name']}, {data['sys']['country']}")
-            print(f"Temperature : {data['main']['temp']}°C")
+            print(f"📍Weather in {data['name']}, {data['sys']['country']}")
+            print(f"🌡Temperature : {data['main']['temp']}°C")
             #print(f"Feels Like  : {data['main']['feels_like']}°C")
-            print(f"Humidity    : {data['main']['humidity']}%")
+            print(f"💧Humidity  : {data['main']['humidity']}%")
             #print(f"Pressure    : {data['main']['pressure']} hPa")
-            print(f"Weather     : {data['weather'][0]['description'].title()}")
-            print(f"Wind Speed  : {data['wind']['speed']} m/s")
+            print(f"🌥Weather     : {data['weather'][0]['description'].title()}")
+            print(f"💨 Wind Speed  : {data['wind']['speed']} m/s")
         else:
             print(f" City {city} not found. Please check the name and Try again.")    
     except Exception as e:
