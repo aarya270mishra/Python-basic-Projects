@@ -3,6 +3,7 @@ import time
 #Specifying the opponents choices 
 opponent = ["rock" , "paper" , "scissor"]
 
+
 random_opponent = random.choice(opponent)  #.choice() allows random choice among strings
 
 print("Lets Play Rock Paper Scissors !")
@@ -10,7 +11,7 @@ time.sleep(2)
 
 while True:
     user_choice=input(r"Enter your choice (rock/paper/scissor):").lower()
-
+  
     print(f" Computer choosed : {random_opponent}")
 
     if user_choice == "rock" and random_opponent == "paper":
